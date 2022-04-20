@@ -40,7 +40,7 @@ public class Employee {
 		this.lastName = lastName;
 		this.idNumber = idNumber;
 		this.address = address;
-		this.tglBergabung = tglBergabung
+		this.tglBergabung = tglBergabung;
 		this.isForeigner = isForeigner;
 		this.gender = gender;
 		
