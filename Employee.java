@@ -6,16 +6,13 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Date;
 
-public class Employee {
+public class Employee extends DataDiri {
 	
 	private enum Gender{
 		Laki-laki,
 		Perempuan
 	}
 	private String employeeId;
-	private String firstName;
-	private String lastName;
-	private String idNumber;
 	private String address;
 	
 	private Date tglBergabung;
@@ -28,11 +25,9 @@ public class Employee {
 	private int otherMonthlyIncome;
 	private int annualDeductible;
 	
-	private String spouseName;
-	private String spouseIdNumber;
+	private DataDiri spouse;
 
-	private List<String> childNames;
-	private List<String> childIdNumbers;
+	private DataDiri child;
 	
 	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, Date tglBergabung, boolean isForeigner, Gender gender) {
 		this.employeeId = employeeId;
@@ -80,15 +75,7 @@ public class Employee {
 		this.otherMonthlyIncome = income;
 	}
 	
-	public void setSpouse(String spouseName, String spouseIdNumber) {
-		this.spouseName = spouseName;
-		this.spouseIdNumber = idNumber;
-	}
 	
-	public void addChild(String childName, String childIdNumber) {
-		childNames.add(childName);
-		childIdNumbers.add(childIdNumber);
-	}
 	
 	public int getAnnualIncomeTax() {
 		
